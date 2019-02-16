@@ -8,3 +8,5 @@ REMEMBER if you change the file name(s), the name(s) must match 100% also the .p
 Keep all the files in one folder!
 
 Note: If you've got a black theme installed onto chrome you can change the 'Ecosia2.png' to 'Ecosia.PNG', for higher accuracy.
+
+# If you clear cookies in the search history, your planted trees counter will be reset, but you have still planted trees.

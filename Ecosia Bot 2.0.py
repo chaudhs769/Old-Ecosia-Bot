@@ -14,14 +14,16 @@ def start():
         write = random.choice(list)
 
     try:
-        # Try and click the 'Searchbar.PNG if found, with grayscale on to make it faster, and a confidence at 0.6 because that's a good
-        # value that works very well. Confidence is just how confident the bot is that it's 100% that image it's looking for.
+        # Try and click the 'Searchbar.PNG if found, with grayscale on to make it faster, and a confidence at 0.6,
+        # because that's a value that works very well.
+        # Confidence is just how confident the bot is that it's 100% that image it's looking for.
         pyautogui.click(pyautogui.locateCenterOnScreen('Searchbar.PNG', grayscale=True, confidence=0.6))
         # Writes the random word
         pyautogui.write(Keyboard.write)
         sleep(0.1)
         pyautogui.press('enter')
         sleep(0.1)
+        # Type in 'Ecosia.PNG' if you have install the 'Just Black' in chrome
         pyautogui.click(pyautogui.locateCenterOnScreen('Ecosia2.png', confidence=0.3))
         sleep(0.1)
         # Moves the cursor 20 pixels down the Y-axis, so the Ecosia picture can be used again without confusing the bot.
@@ -42,6 +44,7 @@ def start():
             sleep(0.1)
             pyautogui.press('enter')
             sleep(0.1)
+            # Type in 'Ecosia.PNG' if you have install the 'Just Black' in chrome
             pyautogui.click(pyautogui.locateCenterOnScreen('Ecosia2.png', confidence=0.3))
             sleep(0.1)
             pyautogui.move(None, 20)
@@ -52,6 +55,7 @@ def start():
         except ImageNotFoundException:
             sleep(1)
             print("Image not found, most likely caused by a server error or timeout.")
+            # Type in 'Ecosia.PNG' if you have install the 'Just Black' in chrome
             pyautogui.click(pyautogui.locateCenterOnScreen('Ecosia2.png', confidence=0.3))
             pyautogui.moveTo(None, 20)
             sleep(3)
@@ -59,6 +63,6 @@ def start():
 
 
 while True:
-    # Gives you one second from when opening the terminal, to the bot starts doing its magic, and also gives it a little cooldown.
+    # Gives you a second from when opening the terminal, to the bot starts doing its magic, and also adds some cooldown.
     sleep(1)
     start()

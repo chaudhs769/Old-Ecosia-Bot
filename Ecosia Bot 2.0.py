@@ -65,4 +65,3 @@ def start():
 while True:
     # Gives you a second from when opening the terminal, to the bot starts doing its magic, and also adds some cooldown.
     sleep(1)
-    start()

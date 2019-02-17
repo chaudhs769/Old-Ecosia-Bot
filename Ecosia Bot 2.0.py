@@ -53,13 +53,43 @@ def start():
             print("Success")
             sleep(10)
         except ImageNotFoundException:
-            sleep(1)
-            print("Image not found, most likely caused by a server error or timeout.")
-            # Type in 'Ecosia.PNG' if you have install the 'Just Black' in chrome
-            pyautogui.click(pyautogui.locateCenterOnScreen('Ecosia2.png', confidence=0.3))
-            pyautogui.moveTo(None, 20)
-            sleep(3)
-            pyautogui.hotkey('ctrl', '1'), sleep(0.5), pyautogui.hotkey('ctrl', 'w')
+            print("Image also not found, trying another one")
+            try:
+                pyautogui.click(pyautogui.locateCenterOnScreen('Searchbar3.PNG', grayscale=True, confidence=0.6))
+                pyautogui.write(Keyboard.write)
+                sleep(0.1)
+                pyautogui.press('enter')
+                sleep(0.1)
+                pyautogui.click(pyautogui.locateCenterOnScreen('Ecosia.PNG', confidence=0.7))
+                sleep(0.1)
+                pyautogui.move(None, 20)
+                sleep(0.2)
+                pyautogui.hotkey('ctrl', '1'), sleep(0.5), pyautogui.hotkey('ctrl', 'w')
+                print("Success")
+                sleep(10)
+            except ImageNotFoundException:
+                print("Image also not found, trying another one")
+                try:
+                    pyautogui.click(pyautogui.locateCenterOnScreen('Searchbar4.PNG', grayscale=True, confidence=0.6))
+                    pyautogui.write(Keyboard.write)
+                    sleep(0.1)
+                    pyautogui.press('enter')
+                    sleep(0.1)
+                    pyautogui.click(pyautogui.locateCenterOnScreen('Ecosia.PNG', confidence=0.7))
+                    sleep(0.1)
+                    pyautogui.move(None, 20)
+                    sleep(0.2)
+                    pyautogui.hotkey('ctrl', '1'), sleep(0.5), pyautogui.hotkey('ctrl', 'w')
+                    print("Success")
+                    sleep(10)
+                except ImageNotFoundException:
+                    sleep(1)
+                    print("Image not found, most likely caused by a server error or timeout.")
+                    # Type in 'Ecosia.PNG' if you have install the 'Just Black' in chrome
+                    pyautogui.click(pyautogui.locateCenterOnScreen('Ecosia2.png', confidence=0.3))
+                    pyautogui.moveTo(None, 20)
+                    sleep(3)
+                    pyautogui.hotkey('ctrl', '1'), sleep(0.5), pyautogui.hotkey('ctrl', 'w')
 
 
 while True:

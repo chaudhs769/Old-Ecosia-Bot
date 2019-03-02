@@ -1,4 +1,4 @@
-# Author Thor
+# Author - Thor
 import pyautogui
 from time import sleep
 import random
